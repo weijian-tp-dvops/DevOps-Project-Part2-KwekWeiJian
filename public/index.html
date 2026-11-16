@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Dashboard</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+
+            <h2 class="logo">✓ TaskFlow</h2>
+            <p class="sidebar-label">WORKSPACE</p>
+
+            <nav>
+                <a href="index.html" class="active">
+                    Dashboard
+                </a>
+
+                <a href="create-task.html">
+                    + Create Task
+                </a>
+
+                <a href="update-task.html">
+                    Update Status
+                </a>
+
+                <a href="search-task.html">
+                    Search Tasks
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                Student Task Manager
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <div class="page-heading">
+
+                <div>
+                    <p class="eyebrow">YOUR WORKSPACE</p>
+                    <h1>Dashboard Overview</h1>
+
+                    <p>
+                        Keep track of assignments, deadlines
+                        and progress in one place.
+                    </p>
+                </div>
+
+                <a href="create-task.html" class="primary-link">
+                    + New Task
+                </a>
+
+            </div>
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <p>Total Tasks</p>
+                    <h2 id="totalTasks">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>In Progress</p>
+                    <h2 id="inProgressTasks">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Completed Tasks</p>
+                    <h2 id="completedTasks">0</h2>
+                </div>
+
+            </section>
+
+            <section class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>All Tasks</h2>
+                        <p>View your latest assignments</p>
+                    </div>
+
+                    <button id="refreshDashboard" type="button">
+                        Refresh
+                    </button>
+
+                </div>
+
+                <div class="table-scroll">
+
+                    <table class="task-table">
+
+                        <thead>
+                            <tr>
+                                <th>Task ID</th>
+                                <th>Task Title</th>
+                                <th>Deadline</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="dashboardTaskList">
+                            <tr>
+                                <td colspan="5">
+                                    Loading tasks...
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p id="dashboardMessage" role="status"></p>
+
+            </section>
+
+            <section class="dashboard-panel quick-actions">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Quick Actions</h2>
+                        <p>Access task management features</p>
+                    </div>
+                </div>
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>Create Task</h3>
+                        <p>
+                            Add assignments with deadlines
+                            and priority levels.
+                        </p>
+                        <a href="create-task.html" class="nav-button">
+                            Create Task
+                        </a>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Update Status</h3>
+                        <p>
+                            Track your assignments by
+                            updating their progress.
+                        </p>
+                        <a href="update-task.html" class="nav-button">
+                            Update Status
+                        </a>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Search Tasks</h3>
+                        <p>
+                            Find assignments using
+                            search and filtering.
+                        </p>
+                        <a href="search-task.html" class="nav-button">
+                            Search Tasks
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
