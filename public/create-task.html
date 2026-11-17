@@ -1,59 +1,67 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskFlow | Create Task</title>
-
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/goh-yu-xuan.js" defer></script>
 </head>
-
 <body>
-
     <div class="app-layout">
-
         <aside class="sidebar">
-
             <h2 class="logo">✓ TaskFlow</h2>
-
             <p class="sidebar-label">WORKSPACE</p>
-
             <nav>
                 <a href="index.html">Dashboard</a>
-                <a href="create-task.html" class="active">
-                    + Create Task
-                </a>
+                <a href="create-task.html" class="active">+ Create Task</a>
                 <a href="update-task.html">Update Status</a>
                 <a href="search-task.html">Search Tasks</a>
             </nav>
-
         </aside>
 
         <main class="main-content">
-
             <div class="page-heading">
                 <div>
                     <p class="eyebrow">TASK MANAGEMENT</p>
-                    <h1>Create Task</h1>
-                    <p>Create Task functionality is coming soon.</p>
+                    <h1>Create New Task</h1>
+                    <p>Add a new assignment to your task list.</p>
                 </div>
             </div>
 
             <section class="dashboard-panel">
-                <h2>Create Task</h2>
-                <p>
-                    This feature will be implemented in
-                    feature/create-task.
-                </p>
+                <h2>Task Details</h2>
+
+                <form id="createTaskForm">
+                    <p>
+                        <label for="title">Task Title</label>
+                        <input type="text" id="title"
+                               placeholder="Enter task title"
+                               required maxlength="150">
+                    </p>
+
+                    <p>
+                        <label for="deadline">Deadline</label>
+                        <input type="date" id="deadline" required>
+                    </p>
+
+                    <p>
+                        <label for="priority">Priority</label>
+                        <select id="priority" required>
+                            <option value="">Select priority</option>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </p>
+
+                    <button type="submit">Create Task</button>
+                </form>
+
+                <p id="formMessage" role="status"></p>
             </section>
-
         </main>
-
     </div>
-
 </body>
 </html>

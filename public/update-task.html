@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Update Task</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/kwek-wei-jian.js" defer></script>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h2 class="logo">✓ TaskFlow</h2>
+            <p class="sidebar-label">WORKSPACE</p>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="create-task.html">+ Create Task</a>
+                <a href="update-task.html" class="active">Update Task</a>
+                <a href="search-task.html">Search Tasks</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-heading">
+                <div>
+                    <p class="eyebrow">TASK MANAGEMENT</p>
+                    <h1>Update Task</h1>
+                    <p>Edit the title, deadline or priority of a task.</p>
+                </div>
+            </div>
+
+            <section class="dashboard-panel">
+                <div class="panel-header">
+                    <div>
+                        <h2>Your Tasks</h2>
+                        <p>Click Update on a task to edit its details</p>
+                    </div>
+                </div>
+
+                <div class="table-scroll">
+                    <table class="task-table">
+                        <thead>
+                            <tr>
+                                <th>Task ID</th>
+                                <th>Task Title</th>
+                                <th>Deadline</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="updateTaskList">
+                            <tr>
+                                <td colspan="6">Loading tasks...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p id="updateMessage" role="status"></p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Update Task Modal -->
+    <div id="taskModal" class="modal-overlay" hidden>
+        <div class="modal-box">
+            <h2>Update Task</h2>
+
+            <form id="updateTaskForm" novalidate>
+                <p>
+                    <label for="editTitle">Task Title</label>
+                    <input type="text" id="editTitle"
+                           placeholder="Enter task title" maxlength="150">
+                </p>
+
+                <p>
+                    <label for="editDeadline">Deadline</label>
+                    <input type="date" id="editDeadline">
+                </p>
+
+                <p>
+                    <label for="editPriority">Priority</label>
+                    <select id="editPriority">
+                        <option value="">Select priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="editStatus">Status</label>
+                    <select id="editStatus">
+                        <option value="">Select status</option>
+                        <option value="Not Started">Not Started</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </p>
+
+                <p id="modalMessage" role="alert"></p>
+
+                <div class="modal-actions">
+                    <button type="button" id="cancelUpdate" class="secondary-button">Cancel</button>
+                    <button type="submit">Update Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
