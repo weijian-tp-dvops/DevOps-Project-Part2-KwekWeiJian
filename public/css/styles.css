@@ -303,3 +303,57 @@ button:hover {
         align-items: flex-start;
     }
 }
+
+/* Update Task page */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(23, 43, 77, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-overlay[hidden] {
+    display: none;
+}
+
+.modal-box {
+    background: white;
+    border-radius: 14px;
+    padding: 26px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.modal-box h2 {
+    margin-top: 0;
+}
+
+.modal-box select,
+.modal-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.secondary-button {
+    background: #e7ecf5;
+    color: #172b4d;
+}
+
+.secondary-button:hover {
+    background: #d5dcea;
+}
+
+#modalMessage {
+    color: #c53030;
+    font-size: 14px;
+}
