@@ -2,9 +2,9 @@
   {
     "id": 1,
     "title": "devops",
-    "deadline": "2026-11-18",
-    "priority": "Low",
-    "status": "In Progress"
+    "deadline": "2026-11-19",
+    "priority": "Medium",
+    "status": "Completed"
   },
   {
     "id": 2,
