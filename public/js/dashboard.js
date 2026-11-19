@@ -93,12 +93,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 statusBadge.textContent = statusValue;
                 statusCell.appendChild(statusBadge);
 
+                const actionCell = document.createElement('td');
+                const deleteButton = document.createElement('button');
+
+                deleteButton.type = 'button';
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', () => {
+                    deleteDashboardTask(task, loadTasks, dashboardMessage, deleteButton);
+                });
+
+                actionCell.appendChild(deleteButton);
+
                 row.append(
                     idCell,
                     titleCell,
                     deadlineCell,
                     priorityCell,
-                    statusCell
+                    statusCell,
+                    actionCell
                 );
 
                 taskTable.appendChild(row);
